@@ -13,11 +13,11 @@ if not test:
 	print "Invalid filename"
 else:
 	count = 0
-	f = open (filename, 'a')
+	f = open(filename, 'a')
 	coding = True
 	os.system("clear")
 	print "[File: %s]" % filename
-	print "\n\n"
+	print "\n"
 	while coding:
 		code = raw_input("> ")
 		if code == "exit()":
@@ -25,5 +25,5 @@ else:
 		f.write(code + "\n")
 		count += 1
 
-	print "\n\n\nSaved >> %s %d alterations" % (filename, count)
+	print "\nSaved >> %s %d alterations" % (filename, count)
 	f.close()
