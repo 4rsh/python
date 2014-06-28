@@ -7,7 +7,7 @@ $ wget https://github.com/4rsh/
 """
 
 filename = raw_input("Type a name for your file.\n")
-test = re.match("[a-zA-Z]+([a-zA-Z]*|[0-9]*)*(\.[a-zA-Z])", filename)
+test = re.match("[a-zA-Z]+([a-zA-Z]*|[0-9]*)*(\.[a-zA-Z])$", filename)
 if not test:
 	print "Invalid filename"
 else:
