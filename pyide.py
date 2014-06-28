@@ -8,21 +8,20 @@ $ wget https://github.com/4rsh/
 """
 
 # Naming the file.
-name		=	raw_input("Type a name for your file.\n")
+name = raw_input("Type a name for your file.\n")
 if len(name) < 4:
 	print "Try again.\n"
 else:
-	file_name 	=   open(name, "a")
+	file = open(name)
 
 	# Writing.
-	coding		=	True
+	coding = True
 	os.system("clear")
 	print "[Code: %s]" % name
 	print "\n\n"
 	while coding:
-
-		code		=	raw_input("")
-		file_name.write(code + "\n")
-		pass
+		code = raw_input("> ")
+		file.write(code + "\n")
 
 	print "\n\n\nSaved >> %s" % name
+	file.close()
