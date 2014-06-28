@@ -1,28 +1,28 @@
+# -*- encoding: UTF-8 -*-
 import os
-
+import re
 """
-
 PyIDE — Developed by Arsh Leak.
 $ wget https://github.com/4rsh/
-
 """
 
-# Naming the file.
-name		=	raw_input("Type a name for your file.\n")
-if len(name) < 4:
-	print "Try again.\n"
+filename = raw_input("Type a name for your file.\n")
+test = re.match("[a-zA-Z]_?([a-zA-Z]_?|[0-9]_?)*(\.[a-zA-Z]+)+", filename)
+if not test:
+	print "Invalid filename"
 else:
-	file_name 	=   open(name, "a")
-
-	# Writing.
-	coding		=	True
+	count = 0
+	f = open(filename, 'a')
+	coding = True
 	os.system("clear")
-	print "[Code: %s]" % name
-	print "\n\n"
+	print "[File: %s]" % filename
+	print "\n"
 	while coding:
+		code = raw_input("> ")
+		if code == "exit()":
+			coding = False
+		f.write(code + "\n")
+		count += 1
 
-		code		=	raw_input("")
-		file_name.write(code + "\n")
-		pass
-
-	print "\n\n\nSaved >> %s" % name
+	print "\nSaved >> %s %d alterations" % (filename, count)
+	f.close()

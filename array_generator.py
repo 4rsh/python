@@ -5,22 +5,22 @@
 Array Generator. — Developed by Arsh Leak.
 $ wget https://github.com/4rsh/
 
-HOW WORKS:
+HOW IT WORKS:
 $ python array_generator.py
-	Enter the name of your array.
-	>       name
+	Enter the array name:
+	>  name
 
-	Enter your strings.
-	>       Archiving Items Automatically
+	Enter your string:
+	>  array filled with the splitted string 
 
   Result:
-	name Array:
-	name    =       ['Archiving', 'Items', 'Automatically']
+	Array name
+	name = ['array', 'filled', 'with', 'the', 'splitted', 'string']
 
 """
 
-name	=	raw_input("\nEnter the name of your array.\n>	")
-items	=	raw_input("\nEnter your strings.\n>	")
-array	=	items.split()
-print "\n\n%s Array:" % name
-print name + "	=	%s" % array
+name = raw_input("\nEnter the name of your array.\n>")
+items = raw_input("\nEnter your strings.\n>")
+array = items.split()
+print "\n\nArray name: ", name
+print name, " = ", array
