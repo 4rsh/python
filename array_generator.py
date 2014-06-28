@@ -11,11 +11,11 @@ $ python array_generator.py
 	>  name
 
 	Enter your string:
-	>  array filled with string splitted
+	>  array filled with the splitted string 
 
   Result:
 	Array name
-	name = ['array', 'filled', 'with', 'string', 'splitted']
+	name = ['array', 'filled', 'with', 'the', 'splitted', 'string']
 
 """
 
