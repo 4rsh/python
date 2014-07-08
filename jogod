@@ -1,0 +1,4 @@
+gols = 0
+while True:
+	print "Brasil	0	x	%s	Alemanha" % (gols)
+	gols += 1
