@@ -22,15 +22,11 @@ PyWiki - Developed by Arsh Leak. (github.com/4rsh)
 
 """
 
-
-class bcolors:
-    WARNING = '\033[0m'
-
 script, lang, query = argv
 
 def success(query):
 	os.system("clear")
-	print bcolors.WARNING + """
+	print """
 	\033[0;37m
 	██████╗ ██╗   ██╗██╗    ██╗██╗██╗  ██╗██╗
 	██╔══██╗╚██╗ ██╔╝██║    ██║██║██║ ██╔╝██║
@@ -75,6 +71,7 @@ def wiki_ok(lang, query):
 				"[9]"	:	" ",
 				","		:	", ",
 				"  "	:	" ",
+				"."		:	". "
 				}
 
 				complete	=	replace_all(detect_class.p.text, reps)
