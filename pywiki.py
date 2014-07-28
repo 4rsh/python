@@ -34,10 +34,8 @@ def success(query):
 	██╔═══╝   ╚██╔╝  ██║███╗██║██║██╔═██╗ ██║
 	██║        ██║   ╚███╔███╔╝██║██║  ██╗██║
 	╚═╝        ╚═╝    ╚══╝╚══╝ ╚═╝╚═╝  ╚═╝╚═╝
-    	Developed by \033[1;37mArsh Leak.\033[0;37m (github.com/4rsh)
-
-\033[1;37m[ %s ]\033[0m
-	""" % query
+    	Developed by \033[1;37mArsh Leak.\033[0;37m (github.com/4rsh)\033[0m
+	"""
 
 def replace_all(text, dic):
     for i, j in dic.iteritems():
@@ -75,7 +73,7 @@ def wiki_ok(lang, query):
 				}
 
 				complete	=	replace_all(detect_class.p.text, reps)
-				print "\033[0;37m%s" % complete.upper().capitalize(), "\n \033[0m"
+				print "\033[1;37m[ %s ]\n\n\033[0m\033[0;37m%s\n\n\033[1;37mRead more at:	http://%s.wikipedia.org/wiki/%s\n \033[0m" % (query, complete, lang, query)
 
 def wiki_error():
 	print "\n\033[1;37mSomething is wrong, you used:\033[0;37m\n$ python %s --yourtld Query ?\n\033[0m" % script
