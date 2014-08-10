@@ -22,17 +22,12 @@ link 	=	sys.argv[1]
 def welcome():
 	os.system("clear")
 	print """\033[1m
-
-
-   █████╗ ██████╗ ███╗   ███╗██╗███╗   ██╗    ███████╗██╗███╗   ██╗██████╗ ███████╗██████╗ 
-  ██╔══██╗██╔══██╗████╗ ████║██║████╗  ██║    ██╔════╝██║████╗  ██║██╔══██╗██╔════╝██╔══██╗
-  ███████║██║  ██║██╔████╔██║██║██╔██╗ ██║    █████╗  ██║██╔██╗ ██║██║  ██║█████╗  ██████╔╝
-  ██╔══██║██║  ██║██║╚██╔╝██║██║██║╚██╗██║    ██╔══╝  ██║██║╚██╗██║██║  ██║██╔══╝  ██╔══██╗
-  ██║  ██║██████╔╝██║ ╚═╝ ██║██║██║ ╚████║    ██║     ██║██║ ╚████║██████╔╝███████╗██║  ██║
-  ╚═╝  ╚═╝╚═════╝ ╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝    ╚═╝     ╚═╝╚═╝  ╚═══╝╚═════╝ ╚══════╝╚═╝  ╚═╝
-                                                                                         
-
-
+     _       _           _         _____ _           _           
+    / \   __| |_ __ ___ (_)_ __   |  ___(_)_ __   __| | ___ _ __ 
+   / _ \ / _` | '_ ` _ \| | '_ \  | |_  | | '_ \ / _` |/ _ \ '__|
+  / ___ \ (_| | | | | | | | | | | |  _| | | | | | (_| |  __/ |   
+ /_/   \_\__,_|_| |_| |_|_|_| |_| |_|   |_|_| |_|\__,_|\___|_|   
+                                                                 
   Developed by Arsh Leak. (\033[0mhttp://www.github.com/4rsh\033[1m)\033[0m
 
 """
@@ -44,9 +39,9 @@ elif "http" in link:
 	for page in pages:
 		get_url	=	requests.get("%s/%s" % (link, page))
 		if get_url.status_code != 200:
-			print "%s  Falhou	[%s]	:	%s/%s%s" % (c_red, get_url.status_code, link, page, c_def)
+			print "%s  Failed	[%s]	:	%s/%s%s" % (c_red, get_url.status_code, link, page, c_def)
 		else:
-			print "%s  Sucesso	[%s]	:	%s/%s%s" % (c_green, get_url.status_code, link, page, c_def)
+			print "%s  Success	[%s]	:	%s/%s%s" % (c_green, get_url.status_code, link, page, c_def)
 else:
 	print "\nYou used \033[1mHTTP?\033[0m\n"
 
