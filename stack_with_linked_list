@@ -1,0 +1,42 @@
+class Node():
+	def __init__(self, data):
+		self.next = None
+		self.data = data
+
+class Stack():
+	def __init__(self):
+		self._top = None
+		self._size = 0
+
+	def push(self, data):
+		tmp = self._top
+		self._top = Node(data)
+		self._top.next = tmp
+		self._size += 1
+
+	def pop(self):
+		if self._size == 0:
+			raise IndexError("pop from empty list!")
+		data = self._top.data
+		self._top = self._top.next
+		self._size -= 1
+		return data
+
+	def items(self):
+		current = self._top
+		while current != None:
+			yield current.data
+			current = current.next
+
+	def size(self):
+		return self._size
+
+s = Stack()
+s.push(2)
+s.push(3)
+s.push(5)
+for item in s.items():
+	print item
+print s.pop(), "popped off the stack"
+for item in s.items():
+	print item
