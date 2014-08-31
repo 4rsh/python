@@ -28,13 +28,3 @@ class Stack():
 
 	def size(self):
 		return self._size
-
-s = Stack()
-s.push(2)
-s.push(3)
-s.push(5)
-for item in s.items():
-	print item
-print s.pop(), "popped off the stack"
-for item in s.items():
-	print item
